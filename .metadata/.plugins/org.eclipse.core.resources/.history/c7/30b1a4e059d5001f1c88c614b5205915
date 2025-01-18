@@ -1,0 +1,35 @@
+package bancodigital;
+
+public class Cliente {
+	private String nome;
+	private double numero;
+	private double agencia;
+	private double saldo = 0f;
+	
+	public Cliente (String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+		
+
+	public double getNumero() {
+		return numero;
+	}
+
+
+	public double getAgencia() {
+		return agencia;
+	}
+	
+
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	
+	
+	
+}

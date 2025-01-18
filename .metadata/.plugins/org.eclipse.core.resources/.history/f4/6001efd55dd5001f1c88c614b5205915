@@ -1,0 +1,12 @@
+package bancodigital;
+
+public class ContaPoupanca extends Conta {
+	
+	public void extratoPoupanca () {
+		System.out.println("CONTA POUPANÇA");
+		extratoInfos();
+	}
+
+	
+	
+}

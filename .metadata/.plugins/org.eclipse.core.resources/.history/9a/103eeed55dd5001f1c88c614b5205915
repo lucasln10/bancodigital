@@ -1,0 +1,10 @@
+package bancodigital;
+
+public class ContaCorrente extends Conta {
+	
+	public void extratoCorrente () {
+		System.out.println("CONTA CORRENTE");
+		extratoInfos();
+	}
+
+}

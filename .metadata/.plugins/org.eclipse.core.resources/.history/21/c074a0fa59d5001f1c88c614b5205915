@@ -1,0 +1,57 @@
+package bancodigital;
+
+public class Conta {
+	private static final int AGENCIA_PADRAO = 001;
+	private static int sequencial = 1;
+	
+	protected double numero;
+	protected double agencia;
+	protected double saldo;
+	
+	public Conta () {
+		this.agencia = AGENCIA_PADRAO;
+		this.numero = sequencial++;
+		
+	}	
+	
+
+	public double getNumero() {
+		return numero;
+	}
+
+
+	public double getAgencia() {
+		return agencia;
+	}
+	
+
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public void sacar (double valor) {
+		if (saldo <= 0) {
+			System.out.println("Saldo insuficente");
+		}else {
+			saldo -= valor;
+			System.out.println("Valor que voce deseja sacar é " + valor + ". saldo atual: " + saldo);
+		}
+	}
+
+	public void depositar (double valor) {
+		saldo += valor;
+		System.out.println("Valor a ser depositado " + valor + ". saldo atual: " + saldo);
+	}
+	
+	public void transferir (double valor, Conta contaDestino) {
+		sacar(valor);
+		contaDestino.depositar(valor);
+	}
+	
+	protected void extratoInfos () {
+		System.out.println(String.format("Conta: %d", numero));
+		System.out.println(String.format("Agencia: %d", agencia));
+		System.out.println(String.format("saldo: %f", saldo));
+		
+	}
+}
